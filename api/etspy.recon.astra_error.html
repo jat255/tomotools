@@ -92,6 +92,11 @@ $(document).ready(function(){
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#parameters" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -223,9 +228,7 @@ $(document).ready(function(){
                     
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="ETSpy 0.8.0 documentation" class="md-nav__button md-logo" aria-label="ETSpy 0.8.0 documentation" data-md-component="logo">
       <img src="../_static/ETSpy_logo_trans.png" alt="logo">
@@ -256,8 +259,8 @@ $(document).ready(function(){
   
   
     <li class="md-nav__item">
-      <a href="../api.html" class="md-nav__link">
-        <span class="md-ellipsis">Primary API</span>
+      <a href="../index.html" class="md-nav__link">
+        <span class="md-ellipsis">Home</span>
       </a>
     </li>
   
@@ -267,6 +270,64 @@ $(document).ready(function(){
       
       
 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples.html" class="md-nav__link">
+        <span class="md-ellipsis">Example Usage</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          <span class="md-ellipsis">API Reference</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">API Reference</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api.html" class="md-nav__link">
+        <span class="md-ellipsis">General Information</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -278,11 +339,10 @@ $(document).ready(function(){
     </li>
   
 
-    
-      
-      
-      
-
+            
+          
+            
+              
   
   
   
@@ -294,11 +354,10 @@ $(document).ready(function(){
     </li>
   
 
-    
-      
-      
-      
-
+            
+          
+            
+              
   
   
   
@@ -310,23 +369,20 @@ $(document).ready(function(){
     </li>
   
 
-    
-      
-      
-      
-
+            
+          
+            
+              
   
   
     
   
   
     
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" checked>
       
       
       
@@ -334,14 +390,14 @@ $(document).ready(function(){
         <div class="md-nav__link md-nav__link--index ">
           <a href="../api.html#reconstruction"><span class="md-ellipsis">Reconstruction</span></a>
           
-            <label for="__nav_5">
+            <label for="__nav_3_5">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" aria-label="Reconstruction" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+      <nav class="md-nav" aria-label="Reconstruction" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
           <span class="md-nav__icon md-icon"></span>
           <span class="md-ellipsis">Reconstruction</span>
         </label>
@@ -565,11 +621,10 @@ $(document).ready(function(){
   
   
 
-    
-      
-      
-      
-
+            
+          
+            
+              
   
   
   
@@ -581,11 +636,10 @@ $(document).ready(function(){
     </li>
   
 
-    
-      
-      
-      
-
+            
+          
+            
+              
   
   
   
@@ -597,11 +651,10 @@ $(document).ready(function(){
     </li>
   
 
-    
-      
-      
-      
-
+            
+          
+            
+              
   
   
   
@@ -613,6 +666,14 @@ $(document).ready(function(){
     </li>
   
 
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
     
   </ul>
 </nav>
@@ -620,6 +681,105 @@ $(document).ready(function(){
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#p-sinogram" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="etspy.recon.astra_error.sinogram (Python parameter) — Tilt series data either of the form [angles, x] or [angles, y, x] where y is the tilt axis and x is the projection axis." class="md-ellipsis">sinogram</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-angles" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="etspy.recon.astra_error.angles (Python parameter) — Projection angles in degrees." class="md-ellipsis">angles</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-method" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="etspy.recon.astra_error.method (Python parameter) — Reconstruction algorithm use." class="md-ellipsis">method</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-iterations" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="etspy.recon.astra_error.iterations (Python parameter) — Number of iterations for the SIRT reconstruction." class="md-ellipsis">iterations</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-constrain" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="etspy.recon.astra_error.constrain (Python parameter) — If True, output reconstruction is constrained above value given by &#39;thresh&#39;." class="md-ellipsis">constrain</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-thresh" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="etspy.recon.astra_error.thresh (Python parameter) — Value above which to constrain the reconstructed data if &#39;constrain&#39; is True." class="md-ellipsis">thresh</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-cuda" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="etspy.recon.astra_error.cuda (Python parameter) — If True, use the CUDA-accelerated Astra algorithms." class="md-ellipsis">cuda</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-type" class="md-nav__link">
+    <span class="md-ellipsis">Return type</span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -775,7 +935,7 @@ use the CPU-based algorithms</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "toc.integrate", "navigation.sections", "navigation.instant", "navigation.top", "search.share", "toc.follow", "toc.sticky", "content.tabs.link", "announce.dismiss"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.instant", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "toc.follow", "toc.sticky", "content.tabs.link", "announce.dismiss"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
       
         <script src="../_static/sphinx_immaterial_theme.f9d9eeeb247ace16c.min.js?v=8ec58cb5"></script>
