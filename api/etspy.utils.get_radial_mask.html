@@ -579,7 +579,7 @@ $(document).ready(function(){
         
           <li class="md-nav__item">
   <a href="#p-center" class="md-nav__link">
-    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="etspy.utils.get_radial_mask.center — Location of mask center (x,y)." class="md-ellipsis">center</span>
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="etspy.utils.get_radial_mask.center — (x, y) location of mask center, optional." class="md-ellipsis">center</span>
   </a>
   
 </li>
@@ -684,7 +684,7 @@ $(document).ready(function(){
         
           <li class="md-nav__item">
   <a href="#p-center" class="md-nav__link">
-    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="etspy.utils.get_radial_mask.center — Location of mask center (x,y)." class="md-ellipsis">center</span>
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="etspy.utils.get_radial_mask.center — (x, y) location of mask center, optional." class="md-ellipsis">center</span>
   </a>
   
 </li>
@@ -723,15 +723,16 @@ $(document).ready(function(){
 
 
 <dl class="py function objdesc">
-<dt class="sig sig-object highlight py">
-<span class="sig-prename descclassname"><span class="pre">etspy.utils.</span></span><span class="sig-name descname"><span class="pre">get_radial_mask</span></span><span class="sig-paren">(</span><span class="sig-param-decl"><em class="sig-param"><a class="n reference internal" href="#p-mask_shape" title="etspy.utils.get_radial_mask.mask_shape — Shape (rows, cols) of the resulting mask."><span class="n"><span class="pre">mask_shape</span></span></a></em>, </span><span class="sig-param-decl"><em class="sig-param"><a class="n reference internal" href="#p-center" title="etspy.utils.get_radial_mask.center — Location of mask center (x,y)."><span class="n"><span class="pre">center</span></span></a><span class="o"><span class="pre">=</span></span><code class="code python default_value docutils literal highlight highlight-python"><span class="kc">None</span></code></em></span><span class="sig-paren">)</span></dt>
+<dt class="sig sig-object highlight sig-wrap py">
+<span class="sig-prename descclassname"><span class="pre">etspy.utils.</span></span><span class="sig-name descname"><span class="pre">get_radial_mask</span></span><span class="sig-paren">(</span><span class="sig-param-decl"><em class="sig-param"><a class="n reference internal" href="#p-mask_shape" title="etspy.utils.get_radial_mask.mask_shape — Shape (rows, cols) of the resulting mask."><span class="n"><span class="pre">mask_shape</span></span></a><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></span></em>, </span><span class="sig-param-decl"><em class="sig-param"><a class="n reference internal" href="#p-center" title="etspy.utils.get_radial_mask.center — (x, y) location of mask center, optional."><span class="n"><span class="pre">center</span></span></a><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><code class="code python default_value docutils literal highlight highlight-python"><span class="kc">None</span></code></em></span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="desctype"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.1)"><span class="pre">ndarray</span></a></span></span></span></dt>
 <dd><p>Calculate a radial mask given a shape and center position.</p>
 <dl class="field-list simple">
 <dt class="field-odd" id="parameters">Parameters<span class="colon">:</span><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></dt>
 <dd class="field-odd"><dl class="simple api-field highlight">
-<dt id="p-mask_shape"><span class="sig-name descname">mask_shape</span><span class="p"> : </span><span class="desctype"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a></span></span><a class="headerlink" href="#p-mask_shape" title="Permalink to this definition">¶</a></dt><dd><p>Shape (rows, cols) of the resulting mask.</p>
+<dt id="p-mask_shape"><span class="n sig-name">mask_shape</span><span class="p">:</span><span class="w"> </span><span class="n"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)">tuple</a><span class="p">[</span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a><span class="p">,</span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a><span class="p">]</span></span></span><a class="headerlink" href="#p-mask_shape" title="Permalink to this definition">¶</a></dt><dd><p>Shape (rows, cols) of the resulting mask.</p>
 </dd>
-<dt id="p-center"><span class="sig-name descname">center</span><span class="p"> : </span><span class="desctype"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a></span></span><a class="headerlink" href="#p-center" title="Permalink to this definition">¶</a></dt><dd><p>Location of mask center (x,y).</p>
+<dt id="p-center"><span class="n sig-name">center</span><span class="p">:</span><span class="w"> </span><span class="n"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)">tuple</a><span class="p">[</span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a><span class="p">,</span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a><span class="p">]</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)">None</a></span></span><span class="w"> </span><span class="o">=</span><span class="w"> </span><code class="code python default_value docutils literal highlight highlight-python"><span class="kc">None</span></code><a class="headerlink" href="#p-center" title="Permalink to this definition">¶</a></dt><dd><p>(x, y) location of mask center, optional. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the center of
+the <code class="docutils literal notranslate"><span class="pre">mask_shape</span></code> will be used by default.</p>
 </dd>
 </dl>
 </dd>
@@ -739,7 +740,7 @@ $(document).ready(function(){
 <dd class="field-even"><p><strong>mask</strong> – Logical array that is True in the masked region and False outside of it.</p>
 </dd>
 <dt class="field-odd" id="return-type">Return type<span class="colon">:</span><a class="headerlink" href="#return-type" title="Permalink to this headline">¶</a></dt>
-<dd class="field-odd"><p>Numpy Array</p>
+<dd class="field-odd"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
