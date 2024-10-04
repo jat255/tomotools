@@ -340,7 +340,7 @@ $(document).ready(function(){
   
     <li class="md-nav__item">
       <a href="api.html#signals" class="md-nav__link">
-        <span class="md-ellipsis">Signals</span>
+        <span title="signals (reference label)" class="md-ellipsis">Signals</span>
       </a>
     </li>
   
@@ -385,7 +385,7 @@ $(document).ready(function(){
   
     <li class="md-nav__item">
       <a href="api.html#reconstruction" class="md-nav__link">
-        <span class="md-ellipsis">Reconstruction</span>
+        <span title="reconstruction (reference label)" class="md-ellipsis">Reconstruction</span>
       </a>
     </li>
   
@@ -430,7 +430,7 @@ $(document).ready(function(){
   
     <li class="md-nav__item">
       <a href="api.html#utilities" class="md-nav__link">
-        <span class="md-ellipsis">Utilities</span>
+        <span title="utilities (reference label)" class="md-ellipsis">Utilities</span>
       </a>
     </li>
   
@@ -524,13 +524,6 @@ $(document).ready(function(){
 </li>
       
         <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
-    <span class="md-ellipsis">Documentation</span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#related-projects" class="md-nav__link">
     <span class="md-ellipsis">Related projects</span>
   </a>
@@ -556,11 +549,11 @@ $(document).ready(function(){
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
   </a>
 
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
 <h1 id="etspy">ETSpy<a class="headerlink" href="#etspy" title="Link to this heading">¶</a></h1>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
 <blockquote>
 <div><p>⚠️ ETSpy is still in a pre-release status, and the API may change with little warning, and
 the documentation may not be 100% correct/complete!</p>
@@ -619,8 +612,9 @@ notebooks</p>
 </ul>
 <h3 id="using-pip">Using pip<a class="headerlink" href="#using-pip" title="Link to this heading">¶</a></h3>
 <p><em>Works on Linux, with additional prerequisites</em></p>
-<p>Assuming you have the prequisite packages on your system (including CUDA libraries), ETSpy
-should be able to be installed with a simple <code class="docutils literal notranslate"><span class="pre">pip</span></code> command (it is recommended to install
+<p>Assuming you have the prequisite packages on your system (including
+the <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html">CUDA libraries</a>),
+ETSpy should be able to be installed with a simple <code class="docutils literal notranslate"><span class="pre">pip</span></code> command (it is recommended to install
 ETSpy in a dedicated virtual environment):</p>
 <ul>
 <li><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><code>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>etspy
@@ -641,9 +635,8 @@ the virtual environment enabled:</p>
 </div>
 </li>
 </ul>
-<p>Some dependencies of ETSpy require compilation of C code or have limited binary distribution,
-meaning using the Anaconda approach above will simplify things greatly if you have trouble with
-“pure” <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
+<p>Some dependencies of ETSpy require compilation of C code, meaning using the Anaconda approach
+above will simplify things greatly if you have trouble with “pure” <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
 <h3 id="removal">Removal<a class="headerlink" href="#removal" title="Link to this heading">¶</a></h3>
 <p>The package can be removed with:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><code>$<span class="w"> </span>pip<span class="w"> </span>uninstall<span class="w"> </span>etspy
@@ -656,17 +649,15 @@ For example, to load a tilt series dataset into a <code class="docutils literal 
 <span class="n">stack</span> <span class="o">=</span> <span class="n">etspy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;TiltSeries.mrc&#39;</span><span class="p">)</span>
 </code></pre></div>
 </div>
-<p>For more details, see the <a class="reference external" href="https://pages.nist.gov/etspy">documentation</a>.</p>
-<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Link to this heading">¶</a></h2>
-<p>Release: <a class="reference external" href="https://github.com/usnistgov/etspy">https://github.com/usnistgov/etspy</a></p>
-<p>A demo notebook is available in the resources folder.  More documentation
-will be made available over time.</p>
+<p>For more details, see the dedicated <a class="reference external" href="https://pages.nist.gov/etspy">documentation</a>, including
+the <a class="reference external" href="https://pages.nist.gov/etspy/examples">example Jupyter notebook</a> and the more detailed
+<a class="reference external" href="https://pages.nist.gov/etspy/api">API Reference</a>.</p>
 <h2 id="related-projects">Related projects<a class="headerlink" href="#related-projects" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://hyperspy.org/">https://hyperspy.org/</a></p></li>
 <li><p><a class="reference external" href="https://astra-toolbox.com/">https://astra-toolbox.com/</a></p></li>
 </ul>
-<p><em>Documentation last generated:</em> October 3, 2024 at 09:28 PM</p>
+<p><em>Documentation last generated:</em> October 4, 2024 at 10:43 PM</p>
 
 
 
@@ -763,7 +754,7 @@ will be made available over time.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand", "navigation.instant", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "toc.follow", "toc.sticky", "content.tabs.link", "announce.dismiss"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand", "navigation.instant", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "toc.follow", "toc.sticky", "content.tabs.link", "content.code.annotate", "announce.dismiss"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
       
         <script src="_static/sphinx_immaterial_theme.f9d9eeeb247ace16c.min.js?v=8ec58cb5"></script>
