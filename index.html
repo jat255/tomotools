@@ -512,6 +512,13 @@ $(document).ready(function(){
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#developer-instructions" class="md-nav__link">
+    <span class="md-ellipsis">Developer instructions</span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -561,6 +568,9 @@ $(document).ready(function(){
 <div><p>⚠️ ETSpy is still in a pre-release status, and the API may change with little warning, and
 the documentation may not be 100% correct/complete!</p>
 </div></blockquote>
+<p><a class="reference external" href="https://pages.nist.gov/etspy"><img alt="Documentation link" src="https://img.shields.io/badge/Documentation-blue?logo=readthedocs&amp;logoColor=white&amp;labelColor=gray" /></a>
+<a class="reference external" href="https://pypi.org/project/etspy/"><img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/etspy" /></a>
+<a class="reference external" href="https://anaconda.org/conda-forge/etspy"><img alt="Conda versions" src="https://img.shields.io/conda/pn/conda-forge/etspy" /></a></p>
 <p>ETSpy is a <a class="reference external" href="https://hyperspy.org">HyperSpy</a> extension package package for the processing, aligment, and reconstruction
 of electron tomography data from TEM/STEM instruments. Tools are provided for basic
 tilt series data processing, stack alignment, and reconstruction using the
@@ -586,7 +596,8 @@ $<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> <
 </code></pre></div>
 </div>
 </li>
-<li><p>Finally, (with the <code class="docutils literal notranslate"><span class="pre">etspy</span></code> environment activated), install the ETSpy package:</p>
+<li><p>Finally, (with the <code class="docutils literal notranslate"><span class="pre">etspy</span></code> environment activated), install the ETSpy package
+from PyPI:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><code><span class="o">(</span>etspy<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>etspy
 </code></pre></div>
 </div>
@@ -619,6 +630,10 @@ notebooks</p>
 the <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html">CUDA libraries</a>),
 ETSpy should be able to be installed with a simple <code class="docutils literal notranslate"><span class="pre">pip</span></code> command (it is recommended to install
 ETSpy in a dedicated virtual environment):</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>On Ubuntu-based systems, the NVIDIA/CUDA dependencies installed via the system-provided <code class="docutils literal notranslate"><span class="pre">nvidia-cuda-toolkit</span></code> apt package may be out of date and incompatible with the ASTRA toolkit. We recommend installing the version directly from NVIDIA.</p>
+</div>
 <ul>
 <li><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><code>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>etspy
 </code></pre></div>
@@ -645,6 +660,38 @@ above will simplify things greatly if you have trouble with “pure” <code cla
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><code>$<span class="w"> </span>pip<span class="w"> </span>uninstall<span class="w"> </span>etspy
 </code></pre></div>
 </div>
+<h3 id="developer-instructions">Developer instructions<a class="headerlink" href="#developer-instructions" title="Link to this heading">¶</a></h3>
+<p>If you wish to contribute to ETSpy or otherwise install a development version,
+this can be accomplished using either <a class="reference external" href="https://www.anaconda.com/download/success">Anaconda</a>
+or <a class="reference external" href="https://python-poetry.org">Poetry</a>.</p>
+<p>If using conda, create and activate a new environment using the <em>development</em> specification,
+clone the repository, and then install the package in “editable” mode using <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><code>$<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>https://raw.githubusercontent.com/usnistgov/etspy/refs/heads/master/resources/etspy-dev.yml
+$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>etspy-dev
+$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/usnistgov/etspy
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>etspy
+$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+</code></pre></div>
+</div>
+<p>If using Poetry (currently only working on Linux), make sure you have <code class="docutils literal notranslate"><span class="pre">poetry</span></code> and the
+CUDA libraries installed, clone the <code class="docutils literal notranslate"><span class="pre">etspy</span></code> repository, and run the install command:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/usnistgov/etspy
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>etspy
+$<span class="w"> </span>poetry<span class="w"> </span>install
+</code></pre></div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Note</p>
+<p>Sometimes, on headless Linux systems without a desktop environment installed, the <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">install</span></code>
+command will hang due to an outstanding issue with handling the system keyring
+(see <a class="reference external" href="https://github.com/python-poetry/poetry/issues/8623">this issue</a>). To workaround the issue,
+run the command <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring</span></code> prior to running
+<code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">install</span></code>, and it should work.</p>
+</div>
+<p>At this point, you should have an “editable” version of the latest development
+version of ETSpy installed to hack on as you wish.</p>
+<p>Contributions to the project are welcome, and can be submitted via the GitHub pull
+request mechanism.</p>
 <h2 id="basic-usage">Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading">¶</a></h2>
 <p>The majority of the functionality of ETSpy can be accessed by importing the <code class="docutils literal notranslate"><span class="pre">etspy.api</span></code> module.
 For example, to load a tilt series dataset into a <code class="docutils literal notranslate"><span class="pre">TomoStack</span></code>, you could do the following:</p>
@@ -660,7 +707,7 @@ the <a class="reference external" href="https://pages.nist.gov/etspy/examples">e
 <li><p><a class="reference external" href="https://hyperspy.org/">https://hyperspy.org/</a></p></li>
 <li><p><a class="reference external" href="https://astra-toolbox.com/">https://astra-toolbox.com/</a></p></li>
 </ul>
-<p><em>Documentation last generated:</em> October 5, 2024 at 02:57 AM</p>
+<p><em>Documentation last generated:</em> October 5, 2024 at 03:35 AM</p>
 
 
 
