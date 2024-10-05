@@ -1207,6 +1207,7 @@ $(document).ready(function(){
         <span class="n">cl_ref_index</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">cl_resolution</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span>
         <span class="n">cl_div_factor</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="n">cuda</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;TomoStack&quot;</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Register stack spatially.</span>
@@ -1253,6 +1254,8 @@ $(document).ready(function(){
 <span class="sd">            Factor which determines the number of iterations of common line</span>
 <span class="sd">            alignment to perform.  Default is 8. See</span>
 <span class="sd">            :py:func:`~etspy.align.calc_shifts_com_cl` for more details.</span>
+<span class="sd">        cuda</span>
+<span class="sd">            Whether or not to use CUDA-accelerated reconstruction algorithms.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
@@ -1293,6 +1296,7 @@ $(document).ready(function(){
                 <span class="n">cl_ref_index</span><span class="o">=</span><span class="n">cl_ref_index</span><span class="p">,</span>
                 <span class="n">cl_resolution</span><span class="o">=</span><span class="n">cl_resolution</span><span class="p">,</span>
                 <span class="n">cl_div_factor</span><span class="o">=</span><span class="n">cl_div_factor</span><span class="p">,</span>
+                <span class="n">cuda</span><span class="o">=</span><span class="n">cuda</span><span class="p">,</span>
             <span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
